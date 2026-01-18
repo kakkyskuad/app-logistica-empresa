@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Producto - Logística</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="search-container">
+        <h2>Consulta de Stock</h2>
+        
+        <div class="search-box">
+            <input type="text" id="query-barcode" placeholder="Ingrese código (ej: prod001)..." autofocus>
+            <button onclick="consultarProducto()">Consultar</button>
+        </div>
+
+        <div id="info-busqueda" class="product-card" style="display: none;">
+            <div class="status-badge" id="p-estado">Estado</div>
+            <p><strong>Descripción:</strong> <span id="b-nombre"></span></p>
+            <p><strong>Ubicación:</strong> <span id="b-pasillo"></span></p>
+            <p><strong>Stock en Palet:</strong> <span id="b-stock">0</span> cajas</p>
+            <p><strong>Vencimiento:</strong> <span id="b-vence"></span></p>
+        </div>
+
+        <button class="back-btn" onclick="window.location.href='menu.html'">Volver al Menú</button>
+    </div>
+
+    <div class="ip-footer" id="codigo-ip">ID: ...</div>
+    <script src="js/script.js"></script>
+</body>
+</html>

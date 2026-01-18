@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almacenamiento - Logística</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="storage-container">
+        <h2>Almacenamiento</h2>
+        
+        <div class="search-box">
+            <input type="text" id="storage-barcode" placeholder="Escanee producto para almacenar..." autofocus>
+            <button onclick="verificarParaAlmacenar()">Verificar</button>
+        </div>
+
+        <div id="form-almacenamiento" class="product-card" style="display: none;">
+            <p><strong>Producto:</strong> <span id="st-nombre"></span></p>
+            
+            <label>Cantidad de cajas (Palet)</label>
+            <input type="number" id="st-cantidad" placeholder="Ej: 30">
+            
+            <label>Fecha de Vencimiento</label>
+            <input type="text" id="st-vence" readonly>
+
+            <div class="location-box">
+                <p>Asignar a: <strong id="st-pasillo" style="color: #e94560;"></strong></p>
+            </div>
+
+            <button class="confirm-btn-final" onclick="guardarEnAlmacen()">Guardar en Pasillo</button>
+        </div>
+
+        <button class="back-btn" onclick="window.location.href='menu.html'">Volver al Menú</button>
+    </div>
+
+    <div class="ip-footer" id="codigo-ip">ID: ...</div>
+    <script src="js/script.js"></script>
+</body>
+</html>

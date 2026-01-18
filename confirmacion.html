@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Producto</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="confirm-container">
+        <h2>Confirmación</h2>
+        
+        <div class="search-box">
+            <input type="text" id="barcode-input" placeholder="Escanee o digite código..." autofocus>
+            <button onclick="buscarProducto()">Buscar</button>
+        </div>
+
+        <div id="resultado-producto" class="product-card" style="display: none;">
+            <div class="product-info">
+                <p><strong>Producto:</strong> <span id="p-nombre"></span></p>
+                <p><strong>Capacidad:</strong> <span id="p-litros"></span></p>
+                <p><strong>Vencimiento:</strong> <span id="p-vence"></span></p>
+                <p><strong>Confirmado a las:</strong> <span id="p-hora"></span></p>
+            </div>
+            <button class="confirm-btn-final" onclick="finalizarConfirmacion()">Confirmar Ingreso</button>
+        </div>
+
+        <button class="back-btn" onclick="window.location.href='menu.html'">Volver al Menú</button>
+    </div>
+
+    <div class="ip-footer" id="codigo-ip">ID: ...</div>
+    <script src="js/script.js"></script>
+</body>
+</html>
