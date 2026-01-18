@@ -1,0 +1,142 @@
+/* --- CONFIGURACIÓN BASE --- */
+body {
+    background-color: #1a1a2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+/* Contenedor universal para todas las pantallas */
+.login-box, .menu-container, .confirm-container, .storage-container, .search-container {
+    background: #16213e;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    width: 380px;
+    border: 1px solid #252545;
+}
+
+h2 { 
+    color: #e94560; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    margin-bottom: 25px;
+}
+
+/* --- ENTRADAS Y BOTONES --- */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    background: #0f3460;
+    color: white;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid #e94560;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e94560;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: #c33a50;
+    transform: translateY(-2px);
+}
+
+/* Botones específicos del menú */
+.menu-btn {
+    background-color: #0f3460;
+    border: 1px solid #e94560;
+    margin-bottom: 12px;
+}
+
+/* --- TARJETAS DE INFORMACIÓN --- */
+.product-card {
+    background: #0f3460;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #e94560;
+    text-align: left;
+    animation: fadeIn 0.5s ease;
+}
+
+.product-info p, .product-card p { 
+    margin: 10px 0; 
+    font-size: 14px; 
+    border-bottom: 1px solid #1a1a2e;
+    padding-bottom: 5px;
+}
+
+/* --- ETIQUETAS DE ESTADO (BÚSQUEDA) --- */
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- VARIOS --- */
+.location-box {
+    background: #1a1a2e;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border: 2px dashed #e94560;
+    text-align: center;
+}
+
+.back-btn { 
+    background: transparent; 
+    color: #888; 
+    margin-top: 25px; 
+    font-size: 12px;
+    border: 1px solid #333;
+}
+
+.back-btn:hover {
+    background: #1a1a2e;
+    color: white;
+}
+
+.ip-footer { 
+    position: fixed; 
+    bottom: 15px; 
+    right: 20px; 
+    font-family: 'Courier New', monospace; 
+    color: #533483; 
+    font-size: 14px;
+    background: rgba(0,0,0,0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
